@@ -18,8 +18,16 @@
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/misc.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/cart.css">
 
+    <script src="js/cart.js"></script>
     <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js"></script>
 
 </head>
 <body>
@@ -29,17 +37,15 @@
                 <div class="row">
                     <div class="col-md-6 col-sm-6">
                         <div class="top-header-left">
-                            <a href="#">Войти</a>
-                            <a href="#">Регистрация</a>
+                            <a href="registration.html">Регистрация</a>
+                            <a href="registration.html">Войти</a>
                         </div> <!-- /.top-header-left -->
                     </div> <!-- /.col-md-6 -->
                     <div class="col-md-6 col-sm-6">
                         <div class="social-icons">
                             <ul>
-                                <li><a href="#" class="fa fa-vk"></a></li>
-                                <!-- <li><a href="#" class="fa fa-dribbble"></a></li> -->
-                                <li><a href="#" class="fa fa-youtube"></a></li>
-                                <!-- <li><a href="#" class="fa fa-linkedin"></a></li> -->
+                                <li><a href="https://vk.com/" class="fa fa-vk"></a></li> <!-- ссылки на соцсети -->
+                                <li><a href="https://www.youtube.com/" class="fa fa-youtube"></a></li>
                             </ul>
                             <div class="clearfix"></div>
                         </div> <!-- /.social-icons -->
@@ -52,7 +58,7 @@
                 <div class="row">
                     <div class="col-md-4 col-sm-6 col-xs-8">
                         <div class="logo">
-                            <h1><a href="index.html">Штучки</a></h1>
+                            <h1><a href="index.html"> Штучки </a></h1>
                         </div> <!-- /.logo -->
                     </div> <!-- /.col-md-4 -->
                     <div class="col-md-8 col-sm-6 col-xs-4">
@@ -61,9 +67,9 @@
                                 <i class="fa fa-bars"></i>
                             </a>
                             <ul class="menu">
-                                <li><a href="#">Домой</a></li>
-                                <li><a href="#">Каталог</a></li>
-                                <li><a href="#">О нас</a></li>
+                                <li><a href="index.html">Каталог</a></li>
+                                <li><a href="#" class="add-to-cart">Корзина <span class="counter">0</span></a></li>
+                                <li><a href="product-detail.html">О нас</a></li>
                             </ul>
                         </div> <!-- /.main-menu -->
                     </div> <!-- /.col-md-8 -->
@@ -91,7 +97,6 @@
             </div> <!-- /.container -->
         </div> <!-- /.main-nav -->
     </header> <!-- /.site-header -->
-
     <div class="content-section">
         <div class="container">
             <div class="row">
@@ -124,6 +129,7 @@
                             <span class="tagline">Древо жизни</span>
                             <span class="price">1499р.</span>
                             <p>Полочка для специй из натурального массива дерева. Сделана вручную.</p>                            
+                            <button class="add-to-cart"><i class="fa fa-shopping-cart"></i></button>
                         </div> <!-- /.product-content -->
                     </div> <!-- /.product-item-2 -->
                     <div class="product-item-2">
@@ -135,6 +141,7 @@
                             <span class="tagline">Дива</span>
                             <span class="price">5499р.</span>
                             <p>Большая плетеная вручную корзина для белья  из натуральных материалов диаметром 45 см</p>
+                            <button class="add-to-cart"><i class="fa fa-shopping-cart"></i></button>
                         </div> <!-- /.product-content -->
                     </div> <!-- /.product-item-2 -->
                     <div class="product-item-2">
@@ -146,13 +153,13 @@
                             <span class="tagline">ИП Петрова</span>
                             <span class="price">1999р.</span>
                             <p>Может служить как разделитель пространства или как просто милое дополнение к интерьеру</p>
+                            <button class="add-to-cart"><i class="fa fa-shopping-cart"></i></button>
                         </div> <!-- /.product-content -->
                     </div> <!-- /.product-item-2 -->
                 </div> <!-- /.col-md-4 -->
             </div> <!-- /.row -->
         </div> <!-- /.container -->
     </div> <!-- /.content-section -->
-
     <div class="content-section">
         <div class="container">
             <div class="row">
@@ -170,6 +177,7 @@
                             <h5><a href="#">Гобеленовый коврик</a></h5>
                             <span class="price">13199р.</span>
                             <span class="tagline">Гостиная</span>
+                            <button class="add-to-cart"><i class="fa fa-shopping-cart"></i></button>
                             <ul class="progess-bars">
                                 <li>
                                     <div class="progress">
@@ -190,6 +198,7 @@
                             <h5><a href="#">Умный диффузор</a></h5>
                             <span class="price">1899р.</span>
                             <span class="tagline">Ванная</span>
+                            <button class="add-to-cart"><i class="fa fa-shopping-cart"></i></button>
                             <ul class="progess-bars">
                                 <li>
                                     <div class="progress">
@@ -210,6 +219,7 @@
                             <h5><a href="#">Полотенце</a></h5>
                             <span class="price">399р.</span>
                             <span class="tagline">Кухня</span>
+                            <button class="add-to-cart"><i class="fa fa-shopping-cart"></i></button>
                             <ul class="progess-bars">
                                 <li>
                                     <div class="progress">
@@ -230,6 +240,7 @@
                             <h5><a href="#">Этажерка для обуви</a></h5>
                             <span class="price">12699р.</span>
                             <span class="tagline">Гардеробная</span>
+                            <button class="add-to-cart"><i class="fa fa-shopping-cart"></i></button>
                             <ul class="progess-bars">
                                 <li>
                                     <div class="progress">
@@ -289,17 +300,17 @@
                 </div> <!-- /.row -->
             </div> <!-- /.container -->
         </div> <!-- /.our-partner -->
-        
         <div class="main-footer">
             <div class="container">
                 <div class="row">
                     <div class="col-md-3">
                         <div class="footer-widget">
-                            <h3 class="widget-title">О нас</h3>
-                            Мы - маленький семейный интернет-магазин. Отбираем для Вас самое лучшее, сделанное лучшими мастерами из приятнейших экологически чистых материалов. Хотим, чтобы у каждого дома было уютно. 
+                            <h3 class="widget-title">
+                                <!-- О нас</h3> -->
+                            <!-- Мы - маленький семейный интернет-магазин. Отбираем для Вас самое лучшее, сделанное лучшими мастерами из приятнейших экологически чистых материалов. Хотим, чтобы у каждого дома было уютно.  -->
                             <ul class="follow-us">
-                                <li><a href="#"><i class="fa fa-vk"></i>Вконтакте</a></li>
-                                <li><a href="#"><i class="fa fa-youtube"></i>YouTube</a></li>
+                                <li><a href="https://vk.com/"><i class="fa fa-vk"></i>Вконтакте</a></li>
+                                <li><a href="https://www.youtube.com/"><i class="fa fa-youtube"></i>YouTube</a></li>
                             </ul> <!-- /.follow-us -->
                         </div> <!-- /.footer-widget -->
                     </div> <!-- /.col-md-3 -->
@@ -315,7 +326,7 @@
                             <ul>
                                 <li><a href="#">ООО "Дива"</a></li>
                                 <li><a href="#">ООО "Древо жизни"</a></li>
-                                <li><a href="#">Партнер ИП Петрова</a></li>
+                                <li><a href="#">ИП Петрова</a></li>
                                 <li><a href="#">Доставка</a></li>
                                 <li><a href="#">Оплата</a></li>
                             </ul>
@@ -340,14 +351,14 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 text-center">
-                        <span>Copyright &copy; 2024 <a href="#">Geekbrains</a></span>
+                        <span>Copyright &copy; 2024 <a href="https://gb.ru/">Geekbrains</a></span>
                         <p>Сайт является студенческим проектом. Все совпадения случайны, все картинки сгенерированы</p>
                     </div> <!-- /.col-md-12 -->
                 </div> <!-- /.row -->
             </div> <!-- /.container -->
         </div> <!-- /.bottom-footer -->
-    </footer> <!-- /.site-footer -->
-
+    </footer> <!-- /.site-footer -->  
+    
     
     <script src="js/vendor/jquery-1.10.1.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>

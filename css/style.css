@@ -388,6 +388,19 @@ h6 {
   padding-top: 20px;
 }
 
+.counter {
+  background-color: red;
+  color: white;
+  padding: 2px 5px;
+  border-radius: 50%;
+}
+
+.cart {
+  display: flex;
+  flex-direction: column;
+}
+
+
 /* ==========================================================================
     Default Styling
    ========================================================================== */
@@ -718,7 +731,16 @@ textarea {
   background: #71b46e;
 }
 
-
+.add-to-cart-btn {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  color: #000;
+  cursor: pointer;
+}
 
 /* ==========================================================================
     Footer Site Styling
