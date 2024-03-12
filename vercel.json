@@ -1,8 +1,23 @@
 {
-    "builds": [
-      {
-        "src": "index.html",
-        "use": "@vercel/node"
+  "builds": [
+    {
+      "src": "src",
+      "use": "@vercel/static",
+      "config": {
+        "target": "serverless",
+        "framework": "nextjs",
+        "nodeVersion": "16",
+        "buildOutputDirectory": "dist",
+        "env": {
+          "NODE_ENV": "production"
+        },
+        "customCommands": {
+          "postBuild": "npm run postbuild"
+        },
+        "cache": {
+          "paths": ["node_modules"]
+        }
       }
-    ]
-  }
+    }
+  ]
+}
