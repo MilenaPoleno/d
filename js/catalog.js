@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
     productInfo.appendChild(productPrice);
   
     const addToCartBtn = document.createElement("button");
-    addToCartBtn.classList.add("add-to-cart");
+    addToCartBtn.classList.add("add-to-cart-btn");
     addToCartBtn.textContent = "Add to cart";
     addToCartBtn.addEventListener("click", function () {
       addToCart(product);
@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function getProductsFromIndexPage() {
     const products = [];
-    const addToCartButtons = document.querySelectorAll(".add-to-cart");
+    const addToCartButtons = document.querySelectorAll(".add-to-cart-btn");
   
     addToCartButtons.forEach((button, index) => {
       const productName = button.parentElement.querySelector(".product-name").textContent;
@@ -87,7 +87,7 @@ document.addEventListener("DOMContentLoaded", function () {
   
   function getProductsFromIndexPage() {
     const products = [];
-    const addToCartButtons = document.querySelectorAll(".add-to-cart");
+    const addToCartButtons = document.querySelectorAll(".add-to-cart-btn");
   
     addToCartButtons.forEach((button, index) => {
       const productName = button.parentElement.querySelector(".product-name").textContent;
@@ -115,10 +115,10 @@ document.addEventListener("DOMContentLoaded", function () {
     productImg.src = product.image;
     productElement.appendChild(productImg);
     
-    const productInfo = document.createElement("div");
-    productInfo.classList.add("product-info");
+    // const productInfo = document.createElement("div");
+    // productInfo.classList.add("product-info");
     
-    const productName = document.createElement("h2");
+    const productName = document.createElement("h5");
     productName.classList.add("product-name");
     productName.textContent = product.name;
     productInfo.appendChild(productName);
@@ -128,13 +128,13 @@ document.addEventListener("DOMContentLoaded", function () {
     productDescription.textContent = product.description;
     productInfo.appendChild(productDescription);
     
-    const productPrice = document.createElement("h3");
+    const productPrice = document.createElement("price");
     productPrice.classList.add("product-price");
     productPrice.textContent = `${product.price} ₽`;
     productInfo.appendChild(productPrice);
     
     const addToCartBtn = document.createElement("button");
-    addToCartBtn.classList.add("add-to-cart");
+    addToCartBtn.classList.add("add-to-cart-btn");
     addToCartBtn.textContent = "Add to cart";
     addToCartBtn.addEventListener("click", function () {
     addToCart(product);

@@ -30,3 +30,18 @@
 
 })(window, jQuery);
 
+function myFunction(html) {
+	// Отобразить HTML на странице
+	document.body.innerHTML = html;
+  }
+  
+
+// Получить содержимое файла HTML
+fetch('index.html')
+  .then(response => response.text())
+  .then(html => {
+    // Передать строку HTML в функцию JavaScript
+    myFunction(html);
+  });
+
+  myFunction(html);
