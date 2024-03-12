@@ -1,34 +1,27 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]><html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<html lang="ru">
 <head>
-    <meta charset="utf-8">
-    <title>Штучки</title>
-
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width">
-
-    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800" rel="stylesheet">
-
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/normalize.min.css">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Доставка</title>
     <link rel="stylesheet" href="css/animate.css">
-    <link rel="stylesheet" href="css/misc.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/cart.css">
-
-    <script src="js/cart.js"></script>
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/misc.css">
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/delivery.css">
+    <script src="js/vendor/jquery-1.10.1.min.js"></script>
     <script src="js/vendor/modernizr-2.6.2.min.js"></script>
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js"></script>
-
+    <script src="js/vendor/jquery.gmap3.min.js"></script>
+    <script src="js/vendor/jquery-1.10.1.min.js"></script>
+    <script src="js/vendor/jquery.easing-1.3.js"></script>
+    <script src="js/vendor/bootstrap.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/delivery.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
 </head>
 <body>
     <header class="site-header">
@@ -68,7 +61,7 @@
                             </a>
                             <ul class="menu">
                                 <li><a href="index.html">Каталог</a></li>
-                                <li><a href="cart.html" class="add-to-cart">Корзина <span class="counter">0</span></a></li>
+                                <li><a href="cart.html" class="add-to-cart">Корзина <span class="counter">0</span></a></li>                                
                                 <li><a href="product-detail.html">О нас</a></li>
                             </ul>
                         </div> <!-- /.main-menu -->
@@ -97,35 +90,14 @@
             </div> <!-- /.container -->
         </div> <!-- /.main-nav -->
     </header> <!-- /.site-header -->
-    <main class="container">
-        <div class="row">
-            <div class="col-md-6 offset-md-3">
-                <div class="card">
-                    <div class="card-header">
-                        Регистрация
-                    </div>
-                    <div class="card-body">
-                        <form id="registration-form" onsubmit="return validateForm()">
-                            <div class="form-group">
-                                <label for="username">Имя</label>
-                                <input type="text" class="form-control" id="username" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="email">Электронная почта</label>
-                                <input type="email" class="form-control" id="email" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="password">Пароль</label>
-                                <input type="password" class="form-control" id="password" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="password-confirm">Подтверждение пароля</label>
-                                <input type="password" class="form-control" id="password-confirm" required>
-                            </div>
-                            <button type="submit" class="btn btn-primary">Зарегистрироваться</button>
-                        </form>
-                    </div>
-                </div>
+    <div class="container">
+        <h1>Доставка</h1>
+        <p>Наша компания находится в Санкт-Петербурге, и мы осуществляем доставку по всей России.</p>
+        <p>Срок доставки составляет от 3 до 7 рабочих дней.</p>
+        <p>Бесплатная доставка для заказов с суммой свыше 5000 рублей.</p>
+        <p>Доставка осуществляется по адресу: Санкт-Петербург, ул. Выборгская, д. 123.</p>
+        <p>Если у вас возникли вопросы о доставке, пожалуйста, обратитесь к нам по телефону +7 (812) 123-45-67 или напишите нам на почту <a href="mailto:order@example.com">order@example.com</a>.</p>
+    </div>
     <footer class="site-footer">
         <div class="our-partner">
             <div class="container">
@@ -180,7 +152,7 @@
                                 <!-- О нас</h3> -->
                             <!-- Мы - маленький семейный интернет-магазин. Отбираем для Вас самое лучшее, сделанное лучшими мастерами из приятнейших экологически чистых материалов. Хотим, чтобы у каждого дома было уютно.  -->
                             <ul class="follow-us">
-                                <li><a href="https://vk.com/"><i class="fa fa-vk"></i>Вконтакте</a></li>
+                                <li><a href="https://vk.com//"><i class="fa fa-vk"></i>Вконтакте</a></li>
                                 <li><a href="https://www.youtube.com/"><i class="fa fa-youtube"></i>YouTube</a></li>
                             </ul> <!-- /.follow-us -->
                         </div> <!-- /.footer-widget -->
@@ -199,7 +171,7 @@
                                 <li><a href="#">ООО "Древо жизни"</a></li>
                                 <li><a href="#">ИП Петрова</a></li>
                                 <li><a href="delivery.html">Доставка</a></li>
-                                <li><a href="#">Оплата</a></li>
+                                <li><a href="payment.html">Оплата</a></li>
                             </ul>
                         </div> <!-- /.footer-widget -->
                     </div> <!-- /.col-md-2 -->
@@ -222,19 +194,12 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 text-center">
-                        <span>Copyright &copy; 2024 <a href="https://gb.ru/">Geekbrains</a></span>
+                        <span>Copyright &copy; 2024 <a href="https://gb.ru">Geekbrains</a></span>
                         <p>Сайт является студенческим проектом. Все совпадения случайны, все картинки сгенерированы</p>
                     </div> <!-- /.col-md-12 -->
                 </div> <!-- /.row -->
             </div> <!-- /.container -->
         </div> <!-- /.bottom-footer -->
-    </footer> <!-- /.site-footer -->  
-    <script src="js/vendor/jquery-1.10.1.min.js"></script>
-    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
-    <script src="js/jquery.easing-1.3.js"></script>
-    <script src="js/bootstrap.js"></script>
-    <script src="js/plugins.js"></script>
-    <script src="js/main.js"></script>
-     
+    </footer> <!-- /.site-footer --> 
 </body>
 </html>
