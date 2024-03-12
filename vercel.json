@@ -6,7 +6,7 @@
         "config": {
           "target": "serverless",
           "framework": "static",
-          "nodeVersion": "16",
+          "nodeVersion": "18",
           "buildOutputDirectory": "dist",
           "env": {
             "NODE_ENV": "production"
