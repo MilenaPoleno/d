@@ -12,11 +12,7 @@
             "NODE_ENV": "production"
           },
           "customCommands": {
-            "postBuild": "npm run postbuild"
-          },
-          "cache": {
-            "paths": ["node_modules"],
-            "npm": "npm --cache /tmp/.npm"
+            "postBuild": "npm run build"
           }
         }
       }
