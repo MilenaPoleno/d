@@ -7,7 +7,7 @@
           "target": "serverless",
           "framework": "static",
           "nodeVersion": "18",
-          "buildOutputDirectory": "dist",
+          "buildOutputDirectory": "ach",
           "env": {
             "NODE_ENV": "production"
           },
