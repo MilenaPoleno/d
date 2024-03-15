@@ -1,11 +1,3 @@
-/* 
-Kool Store Template
-http://www.templatemo.com/preview/templatemo_428_kool_store
-*/
-
-/* ==========================================================================
-    HTML5 Boilerplate styles - h5bp.com (generated via initializr.com)
-   ========================================================================== */
 html,
 button,
 input,
@@ -369,7 +361,7 @@ h6 {
 }
 .main-nav .list-menu ul li {
   display: inline-block;
-  padding: 20px 30px;
+  padding: 10px 20px;
   border-left: 1px solid #296648;
 }
 .main-nav .list-menu ul li:last-child {
@@ -385,7 +377,7 @@ h6 {
 }
 .main-nav .notification {
   text-align: right;
-  padding-top: 20px;
+  padding-top: 10px;
 }
 
 .counter {

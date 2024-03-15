@@ -17,16 +17,18 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/cart.css">
     <link rel="stylesheet" href="css/catalog.css">
+    <link rel="stylesheet" href="css/delivery.css">
+    <link rel="stylesheet" href="css/payment.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="js/cart.js"></script>
     <script src="js/catalog.js"></script>
     <script src="js/vendor/modernizr-2.6.2.min.js"></script>
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js"></script>
+
 </head>
 <body>
     <header class="site-header">
@@ -96,9 +98,9 @@
             </div> <!-- /.container -->
         </div> <!-- /.main-nav -->
     </header> <!-- /.site-header -->
-    <section id="products-container">
-        <!-- Товары будут отображаться здесь -->
-    </section>
+    <div id="catalog-content">
+        <!-- Сюда будут вставляться карточки товаров -->
+    </div>    
     <footer class="site-footer">
         <div class="our-partner">
             <div class="container">
@@ -203,5 +205,55 @@
         </div> <!-- /.bottom-footer -->
     </footer> <!-- /.site-footer -->  
     <script src="js/catalog.js"></script>
+    <div id="added-to-cart-message" style="display: none;">Товар добавлен в корзину!</div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Получаем информацию о товарах из локального хранилища
+            const products = JSON.parse(localStorage.getItem('products'));
+    
+            // Находим контейнер для отображения товаров на странице
+            const catalogContainer = document.querySelector('.catalog-items');
+    
+            // Проверяем, есть ли товары в локальном хранилище
+            if (products && products.length > 0) {
+                // Создаем HTML-элементы для каждого товара и добавляем их на страницу
+                products.forEach(product => {
+                    const productHTML = `
+                        <div class="catalog-item" data-id="${product.id}">
+                            <h5>${product.name}</h5>
+                            <p>${product.description}</p>
+                            <p class="price">Цена: <span>${product.price}</span> ₽</p>
+                            <button class="btn btn-primary add-to-cart-btn" onclick="addToCart(this)">Добавить в корзину</button>
+                        </div>
+                    `;
+                    catalogContainer.innerHTML += productHTML;
+                });
+            } else {
+                catalogContainer.innerHTML = "<p>Товары не найдены.</p>";
+            }
+        });
+    
+        function addToCart(button) {
+            const productId = button.parentElement.getAttribute('data-id');
+            const cartCount = document.getElementById('cart-count');
+            const itemCount = parseInt(cartCount.textContent);
+            cartCount.textContent = itemCount + 1;
+        }
+    </script>
+    <script>
+        // Обновление содержимого страницы с помощью fetch
+        function myFunction(html) {
+          document.body.innerHTML = html;
+        }
+    
+        // Получить содержимое файла HTML
+        fetch('index.html')
+          .then(response => response.text())
+          .then(html => {
+            // Передать строку HTML в функцию JavaScript
+            myFunction(html);
+          });
+      </script>
+    
 </body>
 </html>

@@ -20,11 +20,10 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/cart.css">
     <link rel="stylesheet" href="css/catalog.css">
-    <link rel="stylesheet" href="css/delivery.css">
-    <link rel="stylesheet" href="css/payment.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
 
     <script src="js/cart.js"></script>
+    <script src="js/catalog.js"></script>
     <script src="js/vendor/modernizr-2.6.2.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -69,7 +68,7 @@
                                 <i class="fa fa-bars"></i>
                             </a>
                             <ul class="menu">
-                                <li><a href="delivery.html">Доствка</a></li>
+                                <li><a href="delivery.html">Доставка</a></li>
                                 <li><a href="payment.html">Оплата</a></li>
                                 <li><a href="catalog.html">Каталог</a></li>
                             </ul>
@@ -97,316 +96,318 @@
                         </div>
                     </div> <!-- /.col-md-6 -->
                 </div> <!-- /.row -->
-            </div> <!-- /.container -->
+            </div> <!-- /.content -->
         </div> <!-- /.main-nav -->
     </header> <!-- /.site-header -->
-    <div class="content-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-3">
-                    <section id="products-container">
-                        <div class="product-item-1">
-                            <div class="product-thumb">
-                                <img src="images/gallery-image-1.jpg" alt="Корзинка малая">
-                            </div> <!-- /.product-thumb -->
-                            <div class="product-content">
-                                <h5><a href="#">Корзинка малая</a></h5>
-                                <span class="tagline">Дива</span>
-                                <span class="price">399р</span>
-                                <p>Малая корзина диаметром 15 см отлично впишется в любой интерьер и сделает хранение мелочей более эстетичным</p>
-                                <button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i></button>
-                            </div> <!-- /.product-content -->
-                        </div> <!-- /.product-item -->
-                    </section>
-                </div> <!-- /.col-md-3 -->
-                <div class="col-md-5">
-                    <div class="product-holder">
-                        <section id="products-container">
-                            <div class="product-item-2">
+    <div class="products-container">   
+        <div class="content-section">
+            <div class="content">
+                <div class="row">
+                    <div class="col-md-3">
+                        <section class="product-container" data-id="p1">
+                            <div class="product-item-1">
                                 <div class="product-thumb">
-                                    <img src="images/featured/1.jpg" alt="Полочка для специй">
+                                    <img src="images/gallery-image-1.jpg" alt="Корзинка малая">
                                 </div> <!-- /.product-thumb -->
-                                <div class="product-content overlay">
-                                    <h5><a href="#">Полочка для специй</a></h5>
-                                    <span class="tagline">Древо жизни</span>
-                                    <span class="price">1499р.</span>
-                                    <p>Полочка для специй из натурального массива дерева. Сделана вручную.</p>                            
-                                    <button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i></button>
-                                </div> <!-- /.product-content -->
-                            </div> <!-- /.product-item-2 -->
-                        </section>
-                        <section id="products-container">
-                            <div class="product-item-2">
-                                <div class="product-thumb">
-                                    <img src="images/featured/2.jpg" alt="Product Title">
-                                </div> <!-- /.product-thumb -->
-                                <div class="product-content overlay">
-                                    <h5><a href="#">Корзина большая</a></h5>
+                                <div class="product-content">
+                                    <h5><a href="#">Корзинка малая</a></h5>
                                     <span class="tagline">Дива</span>
-                                    <span class="price">5499р.</span>
-                                    <p>Большая плетеная вручную корзина для белья  из натуральных материалов диаметром 45 см</p>
-                                    <button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i></button>
+                                    <span class="price">399р</span>
+                                    <p>Малая корзина диаметром 15 см отлично впишется в любой интерьер и сделает хранение мелочей более эстетичным</p>
+                                    <button class="add-to-cart-btn" data-id="b1"><i class="fa fa-shopping-cart"></i></button>
                                 </div> <!-- /.product-content -->
-                            </div> <!-- /.product-item-2 -->
+                            </div> <!-- /.product-item -->
                         </section>
-                        <div class="clearfix"></div>
-                    </div> <!-- /.product-holder -->
-                </div> <!-- /.col-md-5 -->
-                <div class="col-md-4">
-                    <section id="products-container">
-                        <div class="product-item-3">
-                            <div class="product-thumb">
-                                <img src="images/featured/6.jpg" alt="">
-                            </div> <!-- /.product-thumb -->
-                            <div class="product-content">
-                                <div class="row">
-                                    <div class="col-md-6 col-sm-6">
-                                        <h5><a href="#">Тарелочки</a></h5>
+                    </div> <!-- /.col-md-3 -->
+                    <div class="col-md-5">
+                        <div class="product-holder">
+                            <section class="product-container" data-id="p2">
+                                <div class="product-item-2">
+                                    <div class="product-thumb">
+                                        <img src="images/featured/1.jpg" alt="Полочка для специй">
+                                    </div> <!-- /.product-thumb -->
+                                    <div class="product-content overlay">
+                                        <h5><a href="#">Полочка для специй</a></h5>
+                                        <span class="tagline">Древо жизни</span>
+                                        <span class="price">1499р.</span>
+                                        <p>Полочка для специй из натурального массив0а дерева. Сделана вручную.</p>                            
+                                        <button class="add-to-cart-btn" data-id="b2"><i class="fa fa-shopping-cart"></i></button>
+                                    </div> <!-- /.product-content -->
+                                </div> <!-- /.product-item-2 -->
+                            </section>
+                            <section class="product-container" data-id="p3">
+                                <div class="product-item-2">
+                                    <div class="product-thumb">
+                                        <img src="images/featured/2.jpg" alt="Product Title">
+                                    </div> <!-- /.product-thumb -->
+                                    <div class="product-content overlay">
+                                        <h5><a href="#">Корзина большая</a></h5>
                                         <span class="tagline">Дива</span>
-                                        <span class="price">299р.</span>
-                                    </div> <!-- /.col-md-6 -->
-                                    <div class="col-md-6 col-sm-6">
-                                        <div class="full-row">
-                                            <label for="cat1">Размер:</label>
-                                            <select name="cat1" id="cat1" class="postform">
-                                                <option value="-1">- Выберите -</option>
-                                                <option class="level-0" value="49">S(5см)</option>
-                                                <option class="level-0" value="49">M(7см)</option>
-                                                <option class="level-0" value="56">L(10см)</option>
-                                                <!-- <option class="level-0" value="56">X-Large</option> -->
-                                            </select>
-                                        </div>
-                                        <div class="full-row">
-                                            <label for="cat2">Цвет:</label>
-                                            <select name="cat2" id="cat2" class="postform">
-                                                <option value="-1">- Выберите -</option>
-                                                <option class="level-0" value="2">Тёмный</option>
-                                                <option class="level-0" value="3">Светлый</option>
-                                            </select>
-                                        </div>
-                                    </div> <!-- /.col-md-6 -->
-                                    <div class="col-md-12 col-sm-12">
-                                        <div class="button-holder">
-                                            <button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i></button>
-                                        </div> <!-- /.button-holder -->
-                                    </div> <!-- /.col-md-12 -->
-                                </div> <!-- /.row -->
-                            </div> <!-- /.product-content -->
-                        </div> <!-- /.product-item-3 -->
-                    </section>
-                </div> <!-- /.col-md-4 -->
-            </div> <!-- /.row -->
-            <div class="row">
-                <div class="col-md-4 col-sm-6 col-xs-12">
-                    <section id="products-container">
-                        <div class="product-item-4">
-                            <div class="product-thumb">
-                                <img src="images/featured/3.jpg" alt="Product Title">
-                            </div> <!-- /.product-thumb -->
-                            <div class="product-content overlay">
-                                <h5><a href="#">Набор подставок под горячее</a></h5>
-                                <span class="tagline">Древо жизни</span>
-                                <span class="price">999р.</span>
-                                <p>Две подставки под горячее из разного дерева, диаметр 12см</p>
-                                <button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i></button>
-                            </div> <!-- /.product-content -->
-                        </div> <!-- /.product-item-4 -->
-                    </section>
-                </div> <!-- /.col-md-4 -->
-                <div class="col-md-4 col-sm-6 col-xs-12">
-                    <section id="products-container">
-                        <div class="product-item-4">
-                            <div class="product-thumb">
-                                <img src="images/featured/4.jpg" alt="Product Title">
-                            </div> <!-- /.product-thumb -->
-                            <div class="product-content overlay">
-                                <h5><a href="#">Парящая полка</a></h5>
-                                <span class="tagline">Древо жизни</span>
-                                <span class="price">3299р.</span>
-                                <p>Полка из натурального дуба и ольхи со скрытым креплением 24*50см, крепеж в комплекте</p>
-                                <button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i></button>
-                            </div> <!-- /.product-content -->
-                        </div> <!-- /.product-item-4 -->
-                    </section>
-                </div> <!-- /.col-md-4 -->
-                <div class="col-md-4 col-sm-12 col-xs-12">
-                    <div class="ads-placemenet">
-                        <img src="images/featured/5.jpg" alt="красивая картинка">
-                    </div> <!-- /.ads-placement -->
-                </div> <!-- /.col-md-4 -->
-            </div> <!-- /.row -->
-        </div> <!-- /.container -->
-    </div> <!-- /.content-section -->
-    <div class="content-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 section-title">
-                    <h2>Хиты продаж</h2>
-                </div> <!-- /.section -->
-            </div> <!-- /.row -->
-            <div class="row">
-                <div class="col-md-3 col-sm-6">
-                    <section id="products-container">
-                        <div class="product-item">
-                            <div class="product-thumb">
-                                <img src="images/gallery-image-2.jpg" alt="">
-                            </div> <!-- /.product-thum -->
-                            <div class="product-content">
-                                <h5><a href="#">Набор бомбочек для ванн</a></h5>
-                                <span class="price">999р.</span>
-                                <button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i></button>
-                            </div> <!-- /.product-content -->
-                        </div> <!-- /.product-item -->
-                    </section>
-                </div> <!-- /.col-md-3 -->
-                <div class="col-md-3 col-sm-6">
-                    <section id="products-container">
-                        <div class="product-item">
-                            <div class="product-thumb">
-                                <img src="images/gallery-image-3.jpg" alt="">
-                            </div> <!-- /.product-thum -->
-                            <div class="product-content">
-                                <h5><a href="#">Пара деревянных ложек</a></h5>
-                                <span class="price">299р.</span>
-                                <button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i></button>
-                            </div> <!-- /.product-content -->
-                        </div> <!-- /.product-item -->
-                    </section>
-                </div> <!-- /.col-md-3 -->
-                <div class="col-md-3 col-sm-6">
-                    <section id="products-container">
-                        <div class="product-item">
-                            <div class="product-thumb">
-                                <img src="images/gallery-image-4.jpg" alt="">
-                            </div> <!-- /.product-thum -->
-                            <div class="product-content">
-                                <h5><a href="#">Бамбуковая полочка</a></h5>
-                                <span class="price">1799р.</span>
-                                <button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i></button>
-                            </div> <!-- /.product-content -->
-                        </div> <!-- /.product-item -->
-                    </section>
-                </div> <!-- /.col-md-3 -->
-                <div class="col-md-3 col-sm-6">
-                    <section id="products-container">
-                        <div class="product-item">
-                            <div class="product-thumb">
-                                <img src="images/gallery-image-5.jpg" alt="">
-                            </div> <!-- /.product-thum -->
-                            <div class="product-content">
-                                <h5><a href="#">Ловец снов 30см</a></h5>
-                                <span class="price">2199р.</span>
-                                <button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i></button>
-                            </div> <!-- /.product-content -->
-                        </div> <!-- /.product-item -->
-                    </section>
-                </div> <!-- /.col-md-3 -->
-            </div> <!-- /.row -->
-        </div> <!-- /.container -->
-    </div> <!-- /.content-section -->
-    <div class="content-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 section-title">
-                    <h2>Распродажа</h2>
-                </div> <!-- /.section -->
-            </div> <!-- /.row -->
-            <div class="row">
-                <div class="col-md-3 col-sm-6">
-                    <section id="products-container">
-                        <div class="product-item-vote">
-                            <div class="product-thumb">
-                                <img src="images/products/1.jpg" alt="">
-                            </div> <!-- /.product-thum -->
-                            <div class="product-content">
-                                <h5><a href="#">Гобеленовый коврик</a></h5>
-                                <span class="price">13199р.</span>
-                                <span class="tagline">Гостиная</span>
-                                <button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i></button>
-                                <ul class="progess-bars">
-                                    <li>
-                                        <div class="progress">
-                                            <div class="progress-bar comments" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"></div>
-                                            <span class="comments">6<i class="fa fa-heart"></i></span>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div> <!-- /.product-content -->
-                        </div> <!-- /.product-item-vote -->
-                    </section>
-                </div> <!-- /.col-md-3 -->
-                <div class="col-md-3 col-sm-6">
-                    <section id="products-container">
-                        <div class="product-item-vote">
-                            <div class="product-thumb">
-                                <img src="images/products/2.jpg" alt="">
-                            </div> <!-- /.product-thum -->
-                            <div class="product-content">
-                                <h5><a href="#">Умный диффузор</a></h5>
-                                <span class="price">1899р.</span>
-                                <span class="tagline">Ванная</span>
-                                <button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i></button>
-                                <ul class="progess-bars">
-                                    <li>
-                                        <div class="progress">
-                                            <div class="progress-bar comments" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"></div>
-                                            <span class="comments">6<i class="fa fa-heart"></i></span>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div> <!-- /.product-content -->
-                        </div> <!-- /.product-item-vote -->
-                    </section>
-                </div> <!-- /.col-md-3 -->
-                <div class="col-md-3 col-sm-6">
-                    <section id="products-container">
-                        <div class="product-item-vote">
-                            <div class="product-thumb">
-                                <img src="images/products/3.jpg" alt="">
-                            </div> <!-- /.product-thum -->
-                            <div class="product-content">
-                                <h5><a href="#">Полотенце</a></h5>
-                                <span class="price">399р.</span>
-                                <span class="tagline">Кухня</span>
-                                <button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i></button>
-                                <ul class="progess-bars">
-                                    <li>
-                                        <div class="progress">
-                                            <div class="progress-bar comments" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"></div>
-                                            <span class="comments">6<i class="fa fa-heart"></i></span>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div> <!-- /.product-content -->
-                        </div> <!-- /.product-item-vote -->
-                    </section>
-                </div> <!-- /.col-md-3 -->
-                <div class="col-md-3 col-sm-6">
-                    <section id="products-container">    
-                        <div class="product-item-vote">
-                            <div class="product-thumb">
-                                <img src="images/products/4.jpg" alt="">
-                            </div> <!-- /.product-thum -->
-                            <div class="product-content">
-                                <h5><a href="#">Этажерка для обуви</a></h5>
-                                <span class="price">12699р.</span>
-                                <span class="tagline">Гардеробная</span>
-                                <button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i></button>
-                                <ul class="progess-bars">
-                                    <li>
-                                        <div class="progress">
-                                            <div class="progress-bar comments" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"></div>
-                                            <span class="comments">6<i class="fa fa-heart"></i></span>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div> <!-- /.product-content -->
-                        </div> <!-- /.product-item-vote -->
-                    </section>
-                </div> <!-- /.col-md-3 -->
-            </div> <!-- /.row -->
-        </div> <!-- /.container -->
-    </div> <!-- /.content-section -->
+                                        <span class="price">5499р.</span>
+                                        <p>Большая плетеная вручную корзина для белья  из натуральных материалов диаметром 45 см</p>
+                                        <button class="add-to-cart-btn" data-id="b3"><i class="fa fa-shopping-cart"></i></button>
+                                    </div> <!-- /.product-content -->
+                                </div> <!-- /.product-item-2 -->
+                            </section>
+                            <div class="clearfix"></div>
+                        </div> <!-- /.product-holder -->
+                    </div> <!-- /.col-md-5 -->
+                    <div class="col-md-4">
+                        <section class="product-container" data-id="p4">
+                            <div class="product-item-3">
+                                <div class="product-thumb">
+                                    <img src="images/featured/6.jpg" alt="">
+                                </div> <!-- /.product-thumb -->
+                                <div class="product-content">
+                                    <div class="row">
+                                        <div class="col-md-6 col-sm-6">
+                                            <h5><a href="#">Тарелочки</a></h5>
+                                            <span class="tagline">Дива</span>
+                                            <span class="price">299р.</span>
+                                        </div> <!-- /.col-md-6 -->
+                                        <div class="col-md-6 col-sm-6">
+                                            <div class="full-row">
+                                                <label for="cat1">Размер:</label>
+                                                <select name="cat1" id="cat1" class="postform">
+                                                    <option value="-1">- Выберите -</option>
+                                                    <option class="level-0" value="49">S(5см)</option>
+                                                    <option class="level-0" value="49">M(7см)</option>
+                                                    <option class="level-0" value="56">L(10см)</option>
+                                                    <!-- <option class="level-0" value="56">X-Large</option> -->
+                                                </select>
+                                            </div>
+                                            <div class="full-row">
+                                                <label for="cat2">Цвет:</label>
+                                                <select name="cat2" id="cat2" class="postform">
+                                                    <option value="-1">- Выберите -</option>
+                                                    <option class="level-0" value="2">Тёмный</option>
+                                                    <option class="level-0" value="3">Светлый</option>
+                                                </select>
+                                            </div>
+                                        </div> <!-- /.col-md-6 -->
+                                        <div class="col-md-12 col-sm-12">
+                                            <div class="button-holder">
+                                                <button class="add-to-cart-btn" data-id="b4"><i class="fa fa-shopping-cart"></i></button>
+                                            </div> <!-- /.button-holder -->
+                                        </div> <!-- /.col-md-12 -->
+                                    </div> <!-- /.row -->
+                                </div> <!-- /.product-content -->
+                            </div> <!-- /.product-item-3 -->
+                        </section>
+                    </div> <!-- /.col-md-4 -->
+                </div> <!-- /.row -->
+                <div class="row">
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <section class="product-container" data-id="p5">
+                            <div class="product-item-4">
+                                <div class="product-thumb">
+                                    <img src="images/featured/3.jpg" alt="Product Title">
+                                </div> <!-- /.product-thumb -->
+                                <div class="product-content overlay">
+                                    <h5><a href="#">Набор подставок под горячее</a></h5>
+                                    <span class="tagline">Древо жизни</span>
+                                    <span class="price">999р.</span>
+                                    <p>Две подставки под горячее из разного дерева, диаметр 12см</p>
+                                    <button class="add-to-cart-btn" data-id="b5"><i class="fa fa-shopping-cart"></i></button>
+                                </div> <!-- /.product-content -->
+                            </div> <!-- /.product-item-4 -->
+                        </section>
+                    </div> <!-- /.col-md-4 -->
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <section class="product-container" data-id="p6">
+                            <div class="product-item-4">
+                                <div class="product-thumb">
+                                    <img src="images/featured/4.jpg" alt="Product Title">
+                                </div> <!-- /.product-thumb -->
+                                <div class="product-content overlay">
+                                    <h5><a href="#">Парящая полка</a></h5>
+                                    <span class="tagline">Древо жизни</span>
+                                    <span class="price">3299р.</span>
+                                    <p>Полка из натурального дуба и ольхи со скрытым креплением 24*50см, крепеж в комплекте</p>
+                                    <button class="add-to-cart-btn" data-id="b6"><i class="fa fa-shopping-cart"></i></button>
+                                </div> <!-- /.product-content -->
+                            </div> <!-- /.product-item-4 -->
+                        </section>
+                    </div> <!-- /.col-md-4 -->
+                    <div class="col-md-4 col-sm-12 col-xs-12">
+                        <div class="ads-placemenet">
+                            <img src="images/featured/5.jpg" alt="красивая картинка">
+                        </div> <!-- /.ads-placement -->
+                    </div> <!-- /.col-md-4 -->
+                </div> <!-- /.row -->
+            </div> <!-- /.container -->
+        </div> <!-- /.content-section -->
+        <div class="content-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 section-title">
+                        <h2>Хиты продаж</h2>
+                    </div> <!-- /.section -->
+                </div> <!-- /.row -->
+                <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                        <section class="product-container" data-id="p7">
+                            <div class="product-item">
+                                <div class="product-thumb">
+                                    <img src="images/gallery-image-2.jpg" alt="">
+                                </div> <!-- /.product-thum -->
+                                <div class="product-content">
+                                    <h5><a href="#">Набор бомбочек для ванн</a></h5>
+                                    <span class="price">999р.</span>
+                                    <button class="add-to-cart-btn" data-id="b7"><i class="fa fa-shopping-cart"></i></button>
+                                </div> <!-- /.product-content -->
+                            </div> <!-- /.product-item -->
+                        </section>
+                    </div> <!-- /.col-md-3 -->
+                    <div class="col-md-3 col-sm-6">
+                        <section class="product-container" data-id="p14">
+                            <div class="product-item">
+                                <div class="product-thumb">
+                                    <img src="images/gallery-image-3.jpg" alt="">
+                                </div> <!-- /.product-thum -->
+                                <div class="product-content">
+                                    <h5><a href="#">Пара деревянных ложек</a></h5>
+                                    <span class="price">299р.</span>
+                                    <button class="add-to-cart-btn" data-id="b14"><i class="fa fa-shopping-cart"></i></button>
+                                </div> <!-- /.product-content -->
+                            </div> <!-- /.product-item -->
+                        </section>
+                    </div> <!-- /.col-md-3 -->
+                    <div class="col-md-3 col-sm-6">
+                        <section class="product-container" data-id="p8">
+                            <div class="product-item">
+                                <div class="product-thumb">
+                                    <img src="images/gallery-image-4.jpg" alt="">
+                                </div> <!-- /.product-thum -->
+                                <div class="product-content">
+                                    <h5><a href="#">Бамбуковая полочка</a></h5>
+                                    <span class="price">1799р.</span>
+                                    <button class="add-to-cart-btn" data-id="b8"><i class="fa fa-shopping-cart"></i></button>
+                                </div> <!-- /.product-content -->
+                            </div> <!-- /.product-item -->
+                        </section>
+                    </div> <!-- /.col-md-3 -->
+                    <div class="col-md-3 col-sm-6">
+                        <section class="product-container" data-id="p9">
+                            <div class="product-item">
+                                <div class="product-thumb">
+                                    <img src="images/gallery-image-5.jpg" alt="">
+                                </div> <!-- /.product-thum -->
+                                <div class="product-content">
+                                    <h5><a href="#">Ловец снов 30см</a></h5>
+                                    <span class="price">2199р.</span>
+                                    <button class="add-to-cart-btn" data-id="b9"><i class="fa fa-shopping-cart"></i></button>
+                                </div> <!-- /.product-content -->
+                            </div> <!-- /.product-item -->
+                        </section>
+                    </div> <!-- /.col-md-3 -->
+                </div> <!-- /.row -->
+            </div> <!-- /.container -->
+        </div> <!-- /.content-section -->
+        <div class="content-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 section-title">
+                        <h2>Распродажа</h2>
+                    </div> <!-- /.section -->
+                </div> <!-- /.row -->
+                <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                        <section class="product-container" data-id="p10">
+                            <div class="product-item-vote">
+                                <div class="product-thumb">
+                                    <img src="images/products/1.jpg" alt="">
+                                </div> <!-- /.product-thum -->
+                                <div class="product-content">
+                                    <h5><a href="#">Гобеленовый коврик</a></h5>
+                                    <span class="price">13199р.</span>
+                                    <span class="tagline">Гостиная</span>
+                                    <button class="add-to-cart-btn" data-id="b10"><i class="fa fa-shopping-cart"></i></button>
+                                    <ul class="progess-bars">
+                                        <li>
+                                            <div class="progress">
+                                                <div class="progress-bar comments" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"></div>
+                                                <span class="comments">6<i class="fa fa-heart"></i></span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div> <!-- /.product-content -->
+                            </div> <!-- /.product-item-vote -->
+                        </section>
+                    </div> <!-- /.col-md-3 -->
+                    <div class="col-md-3 col-sm-6">
+                        <section class="product-container" data-id="11">
+                            <div class="product-item-vote">
+                                <div class="product-thumb">
+                                    <img src="images/products/2.jpg" alt="">
+                                </div> <!-- /.product-thum -->
+                                <div class="product-content">
+                                    <h5><a href="#">Умный диффузор</a></h5>
+                                    <span class="price">1899р.</span>
+                                    <span class="tagline">Ванная</span>
+                                    <button class="add-to-cart-btn" data-id="b11"><i class="fa fa-shopping-cart"></i></button>
+                                    <ul class="progess-bars">
+                                        <li>
+                                            <div class="progress">
+                                                <div class="progress-bar comments" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"></div>
+                                                <span class="comments">6<i class="fa fa-heart"></i></span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div> <!-- /.product-content -->
+                            </div> <!-- /.product-item-vote -->
+                        </section>
+                    </div> <!-- /.col-md-3 -->
+                    <div class="col-md-3 col-sm-6">
+                        <section class="product-container" data-id="p12">
+                            <div class="product-item-vote">
+                                <div class="product-thumb">
+                                    <img src="images/products/3.jpg" alt="Полотенце">
+                                </div> <!-- /.product-thum -->
+                                <div class="product-content">
+                                    <h5><a href="#">Полотенце</a></h5>
+                                    <span class="price">399р.</span>
+                                    <span class="tagline">Кухня</span>
+                                    <button class="add-to-cart-btn" data-id="b12"><i class="fa fa-shopping-cart"></i></button>
+                                    <ul class="progess-bars">
+                                        <li>
+                                            <div class="progress">
+                                                <div class="progress-bar comments" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"></div>
+                                                <span class="comments">6<i class="fa fa-heart"></i></span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div> <!-- /.product-content -->
+                            </div> <!-- /.product-item-vote -->
+                        </section>
+                    </div> <!-- /.col-md-3 -->
+                    <div class="col-md-3 col-sm-6">
+                        <section class="product-container" data-id="p13">    
+                            <div class="product-item-vote">
+                                <div class="product-thumb">
+                                    <img src="images/products/4.jpg" alt="Этажерка для обуви">
+                                </div> <!-- /.product-thum -->
+                                <div class="product-content">
+                                    <h5><a href="#">Этажерка для обуви</a></h5>
+                                    <span class="price">12699р.</span>
+                                    <span class="tagline">Гардеробная</span>
+                                    <button class="add-to-cart-btn" data-id="b13"><i class="fa fa-shopping-cart"></i></button>
+                                    <ul class="progess-bars">
+                                        <li>
+                                            <div class="progress">
+                                                <div class="progress-bar comments" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"></div>
+                                                <span class="comments">6<i class="fa fa-heart"></i></span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div> <!-- /.product-content -->
+                            </div> <!-- /.product-item-vote -->
+                        </section>
+                    </div> <!-- /.col-md-3 -->
+                </div> <!-- /.row -->
+            </div> <!-- /.container -->
+        </div> <!-- /.content-section -->
+    </div>
     <footer class="site-footer">
         <div class="our-partner">
             <div class="container">
@@ -520,5 +521,35 @@
     <script src="js/catalog.js"></script>
     <script src="js/delivery.js"></script>
     <script src="js/payment.js"></script>
+    <div id="added-to-cart-message" style="display: none;">Товар добавлен в корзину!</div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const addToCartButtons = document.querySelectorAll('.add-to-cart-btn');
+    
+            addToCartButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const productContainer = button.parentElement.parentElement;
+                    const productId = productContainer.getAttribute('data-id');
+                    const productName = productContainer.querySelector('h5').textContent;
+                    const productDescription = productContainer.querySelector('p').textContent;
+                    const productPrice = parseInt(productContainer.querySelector('.price span').textContent, 10);
+    
+                    const product = {
+                        id: productId,
+                        name: productName,
+                        description: productDescription,
+                        price: productPrice
+                    };
+    
+                    let productsInCart = JSON.parse(localStorage.getItem('products')) || [];
+                    productsInCart.push(product);
+                    localStorage.setItem('products', JSON.stringify(productsInCart));
+    
+                    const cartCount = document.getElementById('cart-count');
+                    cartCount.textContent = parseInt(cartCount.textContent) + 1;
+                });
+            });
+        });
+    </script>    
 </body>
 </html>

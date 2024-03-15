@@ -45,3 +45,90 @@
 .add-to-cart-btn:hover {
   background-color: #4cae4c;
 }
+
+/* ==========================================================================
+   Catalog Styling
+   ========================================================================== */
+
+/* Общие стили для элементов каталога */
+.catalog-item {
+    margin-bottom: 30px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .catalog-item img {
+    max-width: 100%;
+  }
+  
+  .catalog-item h3 {
+    margin-top: 10px;
+    font-size: 1.4em;
+  }
+  
+  .catalog-item p {
+    color: #777;
+  }
+  
+  /* Стили для кнопки "Add to Cart" */
+  .add-to-cart-btn {
+    display: inline-block;
+    padding: 8px 20px;
+    background-color: #2ab96a;
+    color: white;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .add-to-cart-btn:hover {
+    background-color: #228b58;
+  }
+  
+  /* Стили для корзины */
+  .cart-container {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    background-color: #f9f9f9;
+  }
+  
+  .cart-item {
+    margin-bottom: 10px;
+  }
+  
+  .cart-item img {
+    max-width: 60px;
+    vertical-align: middle;
+    margin-right: 10px;
+  }
+  
+  .cart-item p {
+    display: inline-block;
+    margin: 0;
+  }
+  
+  .cart-item .item-price {
+    float: right;
+  }
+  
+  /* Стили для кнопки "Купить" */
+  .add-to-cart-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #2ab96a;
+    color: white;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .add-to-cart-btn:hover {
+    background-color: #228b58;
+  }
+  
